@@ -1,6 +1,65 @@
 {
   "home": {
     "title": "Durchblick",
-    "tagline": "ETF comparison with German tax."
+    "tagline": "ETF comparison with German tax.",
+    "compare_cta": "Start comparison"
+  },
+  "compare": {
+    "heading": "ETF comparison",
+    "subheading": "Two ETFs side by side, with German tax.",
+    "select_a": "ETF A",
+    "select_b": "ETF B",
+    "submit": "Compare",
+    "horizon_label": "Investment horizon",
+    "horizon_value": "{years} years",
+    "investment_label": "Lump-sum investment",
+    "after_tax_label": "Value after taxes",
+    "info_label": "Learn more",
+    "metric": {
+      "ter": "Total expense ratio (TER)",
+      "replication": "Replication method",
+      "distribution": "Distribution policy",
+      "domicile": "Fund domicile",
+      "aum": "Fund size",
+      "inception": "Inception date",
+      "index": "Index",
+      "teilfreistellung": "Teilfreistellung class"
+    },
+    "explanation": {
+      "ter": "The total expense ratio is the ETF's annual management fee, expressed as a percentage of fund assets. Lower values reduce the long-term drag on returns.",
+      "replication": "Physical replication means the ETF directly holds the constituents of the index. Synthetic replication uses swap agreements with a bank to deliver the index return.",
+      "distribution": "Distributing ETFs pay dividends to investors. Accumulating ETFs reinvest them automatically inside the fund.",
+      "domicile": "The country where the ETF is legally constituted. Ireland and Luxembourg are common in Europe, often for tax reasons.",
+      "aum": "Total assets under management. Larger funds tend to have tighter spreads and lower closure risk.",
+      "inception": "The day the ETF was launched. Older funds have more historical data.",
+      "index": "The underlying benchmark the ETF tracks.",
+      "teilfreistellung": "Equity funds in Germany receive a 30 percent partial exemption on taxable income. Mixed funds receive 15 percent.",
+      "after_tax": "Estimated end value after Vorabpauschale, capital gains tax, Solidaritaetszuschlag, and the Teilfreistellung partial exemption. Assumption: lump-sum investment, no withdrawals during the horizon."
+    },
+    "domicile_value": {
+      "IE": "Ireland",
+      "LU": "Luxembourg",
+      "DE": "Germany"
+    },
+    "replication_value": {
+      "physical": "physical",
+      "physical (sampling)": "physical (sampling)",
+      "synthetic": "synthetic"
+    },
+    "distribution_value": {
+      "accumulating": "accumulating",
+      "distributing": "distributing"
+    },
+    "teilfreistellung_value": {
+      "equity": "equity fund (30 percent)",
+      "mixed": "mixed fund (15 percent)",
+      "none": "none"
+    }
+  },
+  "common": {
+    "disclaimer_not_advice": "This page is informational and does not constitute investment advice.",
+    "disclaimer_past_returns": "Past performance does not predict future returns.",
+    "error_loading": "Data could not be loaded.",
+    "lang_switch_to": "Deutsch"
   }
 }

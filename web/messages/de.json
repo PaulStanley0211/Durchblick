@@ -1,6 +1,65 @@
 {
   "home": {
     "title": "Durchblick",
-    "tagline": "ETF-Vergleich mit deutscher Steuer."
+    "tagline": "ETF-Vergleich mit deutscher Steuer.",
+    "compare_cta": "Vergleich starten"
+  },
+  "compare": {
+    "heading": "ETF-Vergleich",
+    "subheading": "Zwei ETFs nebeneinander, mit deutscher Steuer.",
+    "select_a": "ETF A",
+    "select_b": "ETF B",
+    "submit": "Vergleichen",
+    "horizon_label": "Anlagedauer",
+    "horizon_value": "{years} Jahre",
+    "investment_label": "Einmalanlage",
+    "after_tax_label": "Wert nach Steuern",
+    "info_label": "Mehr erfahren",
+    "metric": {
+      "ter": "Verwaltungsgebühr (TER)",
+      "replication": "Replikationsmethode",
+      "distribution": "Ertragsverwendung",
+      "domicile": "Fondsdomizil",
+      "aum": "Fondsvolumen",
+      "inception": "Auflagedatum",
+      "index": "Index",
+      "teilfreistellung": "Teilfreistellungsklasse"
+    },
+    "explanation": {
+      "ter": "Die Total Expense Ratio ist die jährliche Verwaltungsgebühr des ETFs, ausgedrückt als Prozentsatz des Fondsvermögens. Niedrigere Werte schmälern die Rendite über lange Zeiträume weniger.",
+      "replication": "Physische Replikation bedeutet, dass der ETF die Aktien des Index direkt hält. Synthetische Replikation verwendet Swap-Geschäfte mit einer Bank, um die Indexrendite abzubilden.",
+      "distribution": "Ausschüttende ETFs zahlen Dividenden an Anleger aus. Thesaurierende ETFs reinvestieren sie automatisch im Fonds.",
+      "domicile": "Das Land, in dem der ETF rechtlich aufgelegt ist. Irland und Luxemburg sind in Europa üblich, häufig aus steuerlichen Gründen.",
+      "aum": "Das gesamte verwaltete Fondsvermögen. Größere Fonds neigen zu engeren Spreads und einem geringeren Schließungsrisiko.",
+      "inception": "Der Tag, an dem der ETF aufgelegt wurde. Ältere Fonds haben mehr historische Daten.",
+      "index": "Der zugrunde liegende Index, den der ETF nachbildet.",
+      "teilfreistellung": "Aktienfonds erhalten in Deutschland eine Teilfreistellung von 30 Prozent auf besteuerte Erträge. Mischfonds erhalten 15 Prozent.",
+      "after_tax": "Geschätzter Endwert nach Vorabpauschale, Kapitalertragsteuer, Solidaritätszuschlag und unter Berücksichtigung der Teilfreistellung. Annahme: einmalige Anlage, keine Auszahlungen während der Laufzeit."
+    },
+    "domicile_value": {
+      "IE": "Irland",
+      "LU": "Luxemburg",
+      "DE": "Deutschland"
+    },
+    "replication_value": {
+      "physical": "physisch",
+      "physical (sampling)": "physisch (Sampling)",
+      "synthetic": "synthetisch"
+    },
+    "distribution_value": {
+      "accumulating": "thesaurierend",
+      "distributing": "ausschüttend"
+    },
+    "teilfreistellung_value": {
+      "equity": "Aktienfonds (30 Prozent)",
+      "mixed": "Mischfonds (15 Prozent)",
+      "none": "keine"
+    }
+  },
+  "common": {
+    "disclaimer_not_advice": "Diese Seite ist informativ und stellt keine Anlageberatung dar.",
+    "disclaimer_past_returns": "Vergangene Wertentwicklungen sagen keine zukünftigen voraus.",
+    "error_loading": "Daten konnten nicht geladen werden.",
+    "lang_switch_to": "English"
   }
 }
