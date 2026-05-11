@@ -1,0 +1,22 @@
+name: durchblick
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: durchblick-postgres
+    environment:
+      POSTGRES_DB: durchblick_dev
+      POSTGRES_USER: durchblick
+      POSTGRES_PASSWORD: durchblick
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U durchblick -d durchblick_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
