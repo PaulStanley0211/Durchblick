@@ -12,7 +12,7 @@ Early-stage build. In place today:
 - Back end: `/health` endpoint, ruff + pyright (strict for `app/`) + pytest with one passing test
 - Front end: bilingual placeholder home (German default, English available via `/en`), vitest + React Testing Library with one passing test
 - Root tooling: Prettier, pre-commit hooks (ruff, prettier, standard validators), `Makefile` targets, `.gitattributes` for cross-platform line endings
-- CI: GitHub Actions runs lint, typecheck, and tests on every pull request
+- CI: GitHub Actions runs lint, typecheck, and tests on every pull request. Dependabot files weekly updates for Python, npm, and GitHub Actions dependencies.
 
 Not built yet: deployment pipelines, database schema, data ingestion, German tax calculation, the actual side-by-side comparison view, privacy policy. See [PLAN.md](PLAN.md) for the authoritative scope and phased build plan.
 
