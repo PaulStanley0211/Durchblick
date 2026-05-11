@@ -38,7 +38,7 @@ asyncio_mode = "auto"
 pythonpath = ["."]
 
 [tool.coverage.run]
-source = ["app/tax", "app/repositories/tax_constants"]
+source = ["app/tax", "app.repositories.tax_constants"]
 branch = false
 
 [tool.coverage.report]

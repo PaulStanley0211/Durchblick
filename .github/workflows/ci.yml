@@ -56,7 +56,7 @@ jobs:
 
       - name: Pytest
         working-directory: api
-        run: uv run pytest --cov=app/tax --cov=app/repositories/tax_constants --cov-fail-under=100
+        run: uv run pytest --cov=app/tax --cov=app.repositories.tax_constants --cov-fail-under=100
 
   web:
     name: web
