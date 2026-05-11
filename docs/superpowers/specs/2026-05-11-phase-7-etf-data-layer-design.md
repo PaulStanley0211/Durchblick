@@ -117,7 +117,7 @@ YAML row schema (`shared/etfs.yaml`):
   name: iShares Core MSCI World UCITS ETF
   issuer: iShares (BlackRock)
   ter: 0.0020
-  replication_method: physical          # physical | physical_sampling | synthetic
+  replication_method: physical_sampling # physical | physical_sampling | synthetic
   distribution_policy: accumulating     # accumulating | distributing
   domicile: IE                          # ISO 3166-1 alpha-2
   aum_eur: 85000000000                  # snapshot, not live
