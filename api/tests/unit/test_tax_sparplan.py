@@ -128,4 +128,7 @@ def test_prior_year_vorabpauschale_is_credited_against_final_sale() -> None:
     assert final_year.realized_gain_eur >= Decimal("0")
     raw_lifetime_gain = outcome.final_gross_value_eur - outcome.total_invested_eur
     accounted = final_year.realized_gain_eur + prior_vp_sum + final_year.vorabpauschale_eur
-    assert accounted == raw_lifetime_gain
+    # Tolerate up to 1 cent of rounding drift: `accounted` sums N rounded
+    # records, `raw_lifetime_gain` differences two rounded totals. The
+    # identity holds modulo 1c at rounding boundaries.
+    assert abs(accounted - raw_lifetime_gain) <= Decimal("0.01")
