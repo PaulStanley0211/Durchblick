@@ -7,17 +7,26 @@ Supabase. Monorepo, solo developer with Claude Code as collaborator.
 
 ## Status
 
-**Pre-code.** Planning artifacts complete; implementation has not started.
-Do not assume any code, test, schema, or deployment exists. The first
-Claude Code sessions will bootstrap the monorepo skeleton.
+**Phases 0, 1, 2, 3, 5, 6 implemented; not yet deployed.** Phase 4
+(Vercel + Railway + Supabase deployment pipelines) is deliberately
+deferred until Phases 5-11 are all complete locally. The two Supabase
+projects (staging + production) exist; the Vercel project exists but
+has not been wired to a working domain; Railway has not been signed
+up for. Everything is verified locally only.
+
+Shipped milestones (one line each):
+
+- Phase 0 — repo skeleton committed and pushed (`c3cd662`).
+- Phase 1 — FastAPI back end with `/health`, ruff + pyright + pytest, Docker Postgres for local dev.
+- Phase 2 — Next.js 16 + TypeScript strict + Tailwind v4 + bilingual i18n (`de` primary, `en` secondary); Prettier + pre-commit + full Makefile.
+- Phase 3 — GitHub Actions CI on every PR; Dependabot weekly updates for `pip`, `npm`, and `github-actions`; CI badge on `README.md`.
+- Phase 5 — SQLAlchemy models for `etfs`, `prices`, `tax_constants`, `comparisons`; Alembic configured; `tax_constants` seeded for 2023-2026 (2026 Basiszins is a placeholder pending BMF publication).
+- Phase 6 — static prototype with three mock ETFs, `/etfs` and `/comparison` endpoints, bilingual side-by-side comparison view with tap-to-learn explanations.
 
 Planning artifacts:
 
 1. [`PLAN.md`](PLAN.md) — authoritative spec for scope, architecture, data model, testing, security, deployment. Nine §-numbered sections.
 2. [`CLAUDE.md`](CLAUDE.md) — this file. Coding rules, conventions, and domain context for Claude Code.
-
-Once the project is bootstrapped, this Status section grows. Each shipped
-milestone gets a one-line entry.
 
 ## When you start work
 

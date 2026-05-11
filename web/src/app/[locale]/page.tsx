@@ -7,5 +7,5 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   if (!hasLocale(locale)) notFound();
   const dict = await getDictionary(locale);
-  return <Home dict={dict} />;
+  return <Home dict={dict} locale={locale} />;
 }
