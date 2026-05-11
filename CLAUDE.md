@@ -7,7 +7,7 @@ Supabase. Monorepo, solo developer with Claude Code as collaborator.
 
 ## Status
 
-**Phases 0, 1, 2, 3, 5, 6 implemented; not yet deployed.** Phase 4
+**Phases 0, 1, 2, 3, 5, 6, 7 implemented; not yet deployed.** Phase 4
 (Vercel + Railway + Supabase deployment pipelines) is deliberately
 deferred until Phases 5-11 are all complete locally. The two Supabase
 projects (staging + production) exist; the Vercel project exists but
@@ -22,6 +22,7 @@ Shipped milestones (one line each):
 - Phase 3 — GitHub Actions CI on every PR; Dependabot weekly updates for `pip`, `npm`, and `github-actions`; CI badge on `README.md`.
 - Phase 5 — SQLAlchemy models for `etfs`, `prices`, `tax_constants`, `comparisons`; Alembic configured; `tax_constants` seeded for 2023-2026 (2026 Basiszins is a placeholder pending BMF publication).
 - Phase 6 — static prototype with three mock ETFs, `/etfs` and `/comparison` endpoints, bilingual side-by-side comparison view with tap-to-learn explanations.
+- Phase 7 — curated 15-ETF list in `shared/etfs.yaml` seeded into Postgres via `scripts/seed_etfs.py`; `/etfs` and `/comparison` now read from the database; mock JSON retired.
 
 Planning artifacts:
 

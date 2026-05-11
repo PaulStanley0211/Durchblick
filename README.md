@@ -13,8 +13,9 @@ Early-stage build. In place today:
 - Front end: bilingual placeholder home (German default, English available via `/en`), vitest + React Testing Library with one passing test
 - Root tooling: Prettier, pre-commit hooks (ruff, prettier, standard validators), `Makefile` targets, `.gitattributes` for cross-platform line endings
 - CI: GitHub Actions runs lint, typecheck, and tests on every pull request. Dependabot files weekly updates for Python, npm, and GitHub Actions dependencies.
+- Database: Postgres schema with `etfs`, `prices`, `tax_constants`, and `comparisons` tables; curated 15-ETF universe seeded from `shared/etfs.yaml`; `/etfs` and `/comparison` API endpoints read from the database.
 
-Not built yet: deployment pipelines, database schema, data ingestion, German tax calculation, the actual side-by-side comparison view, privacy policy. See [PLAN.md](PLAN.md) for the authoritative scope and phased build plan.
+Not built yet: deployment pipelines, price ingestion, German tax calculation, privacy policy. See [PLAN.md](PLAN.md) for the authoritative scope and phased build plan.
 
 ## Local development
 
