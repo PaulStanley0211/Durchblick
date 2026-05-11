@@ -31,6 +31,7 @@ web/public/
 # Author-formatted project documents (do not reformat)
 PLAN.md
 CLAUDE.md
+docs/superpowers/
 
 # Python project - ruff owns formatting
 api/
