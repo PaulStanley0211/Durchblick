@@ -22,7 +22,7 @@ from sqlalchemy import func
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
 
-from app.db import _get_engine
+from app.db import get_engine
 from app.models import Etf
 
 REPO_SHARED_YAML = Path(__file__).resolve().parents[2] / "shared" / "etfs.yaml"
@@ -72,7 +72,7 @@ def seed(yaml_path: Path | None = None) -> int:
     _check_unique_isins(rows)
 
     values = [{**row.model_dump(mode="python"), "last_ingested_at": func.now()} for row in rows]
-    with Session(_get_engine()) as session:
+    with Session(get_engine()) as session:
         stmt = insert(Etf).values(values)
         stmt = stmt.on_conflict_do_update(
             index_elements=["isin"],

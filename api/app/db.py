@@ -12,10 +12,10 @@ class Base(DeclarativeBase):
 
 
 @lru_cache(maxsize=1)
-def _get_engine() -> Engine:
+def get_engine() -> Engine:
     return create_engine(get_settings().database_url)
 
 
 def get_session() -> Iterator[Session]:
-    with Session(_get_engine()) as session:
+    with Session(get_engine()) as session:
         yield session
