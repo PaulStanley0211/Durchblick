@@ -27,3 +27,10 @@ coverage/
 
 # Public static assets
 web/public/
+
+# Author-formatted project documents (do not reformat)
+PLAN.md
+CLAUDE.md
+
+# Python project - ruff owns formatting
+api/
