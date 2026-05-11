@@ -35,3 +35,4 @@ migrate-new:
 
 seed:
 	cd api && uv run python -m scripts.seed_tax_constants
+	cd api && uv run python -m scripts.seed_etfs
