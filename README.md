@@ -14,8 +14,9 @@ Early-stage build. In place today:
 - Root tooling: Prettier, pre-commit hooks (ruff, prettier, standard validators), `Makefile` targets, `.gitattributes` for cross-platform line endings
 - CI: GitHub Actions runs lint, typecheck, and tests on every pull request. Dependabot files weekly updates for Python, npm, and GitHub Actions dependencies.
 - Database: Postgres schema with `etfs`, `prices`, `tax_constants`, and `comparisons` tables; curated 15-ETF universe seeded from `shared/etfs.yaml`; `/etfs` and `/comparison` API endpoints read from the database.
+- Tax math: German tax calculation module (Vorabpauschale, Teilfreistellung, Sparerpauschbetrag, Abgeltungsteuer, Solidaritätszuschlag) supporting lump-sum and Sparplan scenarios; 100% line coverage enforced in CI. Returned via a structured `TaxOutcome` with per-year breakdown.
 
-Not built yet: deployment pipelines, price ingestion, German tax calculation, privacy policy. See [PLAN.md](PLAN.md) for the authoritative scope and phased build plan.
+Not built yet: deployment pipelines, price ingestion, privacy policy. See [PLAN.md](PLAN.md) for the authoritative scope and phased build plan.
 
 ## Local development
 
