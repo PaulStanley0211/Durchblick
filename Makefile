@@ -1,4 +1,4 @@
-.PHONY: setup dev test lint migrate dev-api dev-web
+.PHONY: setup dev test lint migrate migrate-new seed dev-api dev-web
 
 setup:
 	cd api && uv sync
@@ -28,4 +28,10 @@ lint:
 	npx --prefix web prettier --check .
 
 migrate:
-	@echo "not implemented yet (filled in Phase 5)"
+	cd api && uv run alembic upgrade head
+
+migrate-new:
+	cd api && uv run alembic revision --autogenerate -m "$(MSG)"
+
+seed:
+	cd api && uv run python -m scripts.seed_tax_constants

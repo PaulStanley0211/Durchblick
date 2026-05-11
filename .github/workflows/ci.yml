@@ -9,6 +9,10 @@ jobs:
   api:
     name: api
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgresql+psycopg://durchblick:durchblick@localhost:5432/durchblick_test
+      SUPABASE_URL: http://localhost
+      SUPABASE_ANON_KEY: ci-placeholder
     services:
       postgres:
         image: postgres:16
@@ -45,6 +49,10 @@ jobs:
       - name: Pyright
         working-directory: api
         run: uv run pyright app/
+
+      - name: Run migrations
+        working-directory: api
+        run: uv run alembic upgrade head
 
       - name: Pytest
         working-directory: api
