@@ -1,0 +1,223 @@
+# Curated source of truth for Durchblick's phase-one ETF universe.
+# Each row's values are copied from the issuer KID (Key Information
+# Document). The trailing two comments on each row record the
+# verification date and the KID URL; update them whenever a row is
+# re-verified. Loader: api/scripts/seed_etfs.py.
+#
+# Fields:
+#   replication_method:     physical | physical_sampling | synthetic
+#   distribution_policy:    accumulating | distributing
+#   teilfreistellung_class: equity | mixed | none
+#   domicile:               ISO 3166-1 alpha-2
+#   aum_eur:                snapshot, not live
+#   ter:                    annual total expense ratio (decimal, e.g. 0.0020 = 0.20%)
+
+- isin: IE00B4L5Y983
+  name: iShares Core MSCI World UCITS ETF
+  issuer: iShares (BlackRock)
+  ter: 0.0020
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 85000000000
+  inception_date: 2009-09-25
+  index_tracked: MSCI World
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.ishares.com/uk/individual/en/literature/kid/kid-ishares-core-msci-world-ucits-etf-usd-acc-en.pdf
+
+- isin: IE00BK5BQT80
+  name: Vanguard FTSE All-World UCITS ETF
+  issuer: Vanguard
+  ter: 0.0022
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 15000000000
+  inception_date: 2019-07-23
+  index_tracked: FTSE All-World
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.de.vanguard/professionell/produkte/etf/aktien/9505/ftse-all-world-ucits-etf-usd-accumulating
+
+- isin: IE00BKM4GZ66
+  name: iShares Core MSCI EM IMI UCITS ETF
+  issuer: iShares (BlackRock)
+  ter: 0.0018
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 20000000000
+  inception_date: 2014-05-30
+  index_tracked: MSCI Emerging Markets IMI
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.ishares.com/uk/individual/en/literature/kid/kid-ishares-core-msci-em-imi-ucits-etf-usd-acc-en.pdf
+
+- isin: IE00B5BMR087
+  name: iShares Core S&P 500 UCITS ETF
+  issuer: iShares (BlackRock)
+  ter: 0.0007
+  replication_method: physical
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 95000000000
+  inception_date: 2010-05-19
+  index_tracked: S&P 500
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.ishares.com/uk/individual/en/literature/kid/kid-ishares-core-sp-500-ucits-etf-usd-acc-en.pdf
+
+- isin: IE00BFY0GT14
+  name: SPDR MSCI ACWI IMI UCITS ETF
+  issuer: State Street (SPDR)
+  ter: 0.0017
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 3500000000
+  inception_date: 2011-05-25
+  index_tracked: MSCI ACWI IMI
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.ssga.com/de/en_gb/intermediary/etfs/funds/spdr-msci-acwi-imi-ucits-etf-spyi-gy
+
+- isin: IE00BJ0KDQ92
+  name: Xtrackers MSCI World UCITS ETF 1C
+  issuer: Xtrackers (DWS)
+  ter: 0.0019
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 12000000000
+  inception_date: 2014-09-30
+  index_tracked: MSCI World
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://etf.dws.com/en-de/IE00BJ0KDQ92-msci-world-ucits-etf-1c/
+
+- isin: LU0274208692
+  name: Xtrackers MSCI World UCITS ETF 1D
+  issuer: Xtrackers (DWS)
+  ter: 0.0019
+  replication_method: physical_sampling
+  distribution_policy: distributing
+  domicile: LU
+  aum_eur: 8000000000
+  inception_date: 2006-12-22
+  index_tracked: MSCI World
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://etf.dws.com/en-de/LU0274208692-msci-world-ucits-etf-1d/
+
+- isin: IE00BJ0KDR08
+  name: Xtrackers MSCI Emerging Markets UCITS ETF 1C
+  issuer: Xtrackers (DWS)
+  ter: 0.0018
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 5500000000
+  inception_date: 2014-09-30
+  index_tracked: MSCI Emerging Markets
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://etf.dws.com/en-de/IE00BJ0KDR08-msci-emerging-markets-ucits-etf-1c/
+
+- isin: IE00B3RBWM25
+  name: Vanguard FTSE All-World UCITS ETF (Distributing)
+  issuer: Vanguard
+  ter: 0.0022
+  replication_method: physical_sampling
+  distribution_policy: distributing
+  domicile: IE
+  aum_eur: 14000000000
+  inception_date: 2012-05-22
+  index_tracked: FTSE All-World
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.de.vanguard/professionell/produkte/etf/aktien/9679/ftse-all-world-ucits-etf-usd-distributing
+
+- isin: IE00B3XXRP09
+  name: Vanguard S&P 500 UCITS ETF
+  issuer: Vanguard
+  ter: 0.0007
+  replication_method: physical
+  distribution_policy: distributing
+  domicile: IE
+  aum_eur: 45000000000
+  inception_date: 2012-05-22
+  index_tracked: S&P 500
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.de.vanguard/professionell/produkte/etf/aktien/9685/sp-500-ucits-etf-usd-distributing
+
+- isin: IE00B0M62Q58
+  name: iShares MSCI World UCITS ETF (Dist)
+  issuer: iShares (BlackRock)
+  ter: 0.0050
+  replication_method: physical_sampling
+  distribution_policy: distributing
+  domicile: IE
+  aum_eur: 7000000000
+  inception_date: 2005-10-25
+  index_tracked: MSCI World
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.ishares.com/uk/individual/en/literature/kid/kid-ishares-msci-world-ucits-etf-usd-dist-en.pdf
+
+- isin: IE00B6R52259
+  name: iShares MSCI ACWI UCITS ETF
+  issuer: iShares (BlackRock)
+  ter: 0.0020
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 8500000000
+  inception_date: 2011-10-13
+  index_tracked: MSCI ACWI
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.ishares.com/uk/individual/en/literature/kid/kid-ishares-msci-acwi-ucits-etf-usd-acc-en.pdf
+
+- isin: IE00B3VVMM84
+  name: iShares STOXX Europe 600 UCITS ETF
+  issuer: iShares (BlackRock)
+  ter: 0.0020
+  replication_method: physical
+  distribution_policy: distributing
+  domicile: IE
+  aum_eur: 9000000000
+  inception_date: 2010-04-20
+  index_tracked: STOXX Europe 600
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.ishares.com/uk/individual/en/literature/kid/kid-ishares-stoxx-europe-600-ucits-etf-de-en.pdf
+
+- isin: IE00BFNM3J75
+  name: iShares MSCI World SRI UCITS ETF
+  issuer: iShares (BlackRock)
+  ter: 0.0020
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 5500000000
+  inception_date: 2017-07-04
+  index_tracked: MSCI World SRI Select Reduced Fossil Fuel
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://www.ishares.com/uk/individual/en/literature/kid/kid-ishares-msci-world-sri-ucits-etf-usd-acc-en.pdf
+
+- isin: IE00BL25JL35
+  name: Xtrackers MSCI World ESG UCITS ETF
+  issuer: Xtrackers (DWS)
+  ter: 0.0020
+  replication_method: physical_sampling
+  distribution_policy: accumulating
+  domicile: IE
+  aum_eur: 3500000000
+  inception_date: 2018-07-25
+  index_tracked: MSCI World Low Carbon SRI Leaders
+  teilfreistellung_class: equity
+  # KID verified 2026-05-08
+  # https://etf.dws.com/en-de/IE00BL25JL35-msci-world-esg-ucits-etf-1c/
