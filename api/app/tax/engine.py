@@ -57,7 +57,9 @@ def _build_year_record(
 
     cgt = compute_capital_gains_tax(after_spb, constants.capital_gains_rate)
     soli = compute_solidaritaetszuschlag(cgt, constants.solidaritaetszuschlag_rate)
-    total_year_tax = _round_eur(cgt + soli)
+    cgt_rounded = _round_eur(cgt)
+    soli_rounded = _round_eur(soli)
+    total_year_tax = cgt_rounded + soli_rounded
 
     return VorabpauschaleYear(
         year=year,
@@ -65,8 +67,8 @@ def _build_year_record(
         realized_gain_eur=_round_eur(realized_gain),
         teilfreistellung_eur=_round_eur(teilfreistellung_eur),
         sparerpauschbetrag_used_eur=_round_eur(spb_used),
-        capital_gains_tax_eur=_round_eur(cgt),
-        solidaritaetszuschlag_eur=_round_eur(soli),
+        capital_gains_tax_eur=cgt_rounded,
+        solidaritaetszuschlag_eur=soli_rounded,
         total_tax_eur=total_year_tax,
     )
 
