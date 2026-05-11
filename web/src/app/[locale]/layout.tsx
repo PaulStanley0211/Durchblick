@@ -24,10 +24,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: LayoutProps<"/[locale]">) {
+export default async function RootLayout({ children, params }: LayoutProps<"/[locale]">) {
   const { locale } = await params;
   if (!hasLocale(locale)) notFound();
   return (

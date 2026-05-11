@@ -6,8 +6,7 @@ import { defaultLocale, locales } from "@/dictionaries";
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const pathnameHasLocale = locales.some(
-    (locale) =>
-      pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
   if (pathnameHasLocale) return;
   const url = request.nextUrl.clone();

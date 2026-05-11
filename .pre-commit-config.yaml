@@ -1,0 +1,30 @@
+default_install_hook_types: [pre-commit]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+      - id: check-added-large-files
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.12
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+        files: ^api/
+      - id: ruff-format
+        files: ^api/
+
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier (web)
+        language: system
+        entry: npx --prefix web prettier --write
+        files: ^web/.*\.(js|jsx|mjs|cjs|ts|tsx|json|css|md|yaml|yml)$
+        exclude: ^web/(node_modules/|\.next/|package-lock\.json|public/)

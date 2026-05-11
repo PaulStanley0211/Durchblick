@@ -1,0 +1,29 @@
+# Build outputs
+.next/
+build/
+dist/
+out/
+
+# Dependencies
+node_modules/
+.venv/
+
+# Lockfiles
+package-lock.json
+uv.lock
+
+# Generated
+next-env.d.ts
+*.tsbuildinfo
+
+# Python caches
+__pycache__/
+.ruff_cache/
+.pytest_cache/
+.pyright/
+
+# Coverage
+coverage/
+
+# Public static assets
+web/public/

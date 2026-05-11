@@ -14,21 +14,13 @@ const enDict = {
 describe("Home", () => {
   it("renders the German title and tagline", () => {
     render(<Home dict={deDict} />);
-    expect(
-      screen.getByRole("heading", { name: "Durchblick" }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("ETF-Vergleich mit deutscher Steuer."),
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Durchblick" })).toBeInTheDocument();
+    expect(screen.getByText("ETF-Vergleich mit deutscher Steuer.")).toBeInTheDocument();
   });
 
   it("renders the English title and tagline", () => {
     render(<Home dict={enDict} />);
-    expect(
-      screen.getByRole("heading", { name: "Durchblick" }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("ETF comparison with German tax."),
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Durchblick" })).toBeInTheDocument();
+    expect(screen.getByText("ETF comparison with German tax.")).toBeInTheDocument();
   });
 });
