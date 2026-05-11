@@ -98,6 +98,7 @@ npm run typecheck
 - **Tax math is test-driven.** Never write tax calculation code without a failing test first. Every German tax rule (Vorabpauschale, Teilfreistellung, Sparerpauschbetrag, capital gains, Solidaritätszuschlag) has explicit cases with known inputs and expected outputs.
 - **One logical change per commit.** Imperative mood. Conventional Commits prefixes (`feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`).
 - **Tax constants live in the database, not in code.** The `tax_constants` table holds year-indexed values (Basiszins, Sparerpauschbetrag amount, Teilfreistellung rates). Tax law changes; never hardcode the numbers.
+- **All money math is `Decimal`, never `float`.** Every value in `api/app/tax/` is a `Decimal`. The orchestrators in `engine.py` round once per year via `_round_eur` (2dp, banker's rounding); primitives in `primitives.py` return unrounded Decimals. Phase 9 will convert to `float` only at the API response boundary.
 - **No user accounts in phase one.** No auth, no user table, no sessions. The `comparisons` table stores pair and timestamp only — no IP, no user agent, no fingerprint.
 
 This section will grow. Real gotchas hit during development get appended
