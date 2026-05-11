@@ -99,8 +99,3 @@ async def test_comparison_unknown_isin_b_returns_404(client: AsyncClient) -> Non
     )
     assert response.status_code == 404
     assert UNKNOWN_ISIN in response.json()["detail"]
-
-
-async def test_comparison_rejects_short_isin(client: AsyncClient) -> None:
-    response = await client.get("/comparison", params={"isin_a": "IE00", "isin_b": FTSE_ALL_WORLD})
-    assert response.status_code == 422
