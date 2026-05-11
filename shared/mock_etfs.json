@@ -1,0 +1,43 @@
+{
+  "etfs": [
+    {
+      "isin": "IE00B4L5Y983",
+      "name": "iShares Core MSCI World UCITS ETF",
+      "issuer": "iShares (BlackRock)",
+      "ter": 0.002,
+      "replication_method": "physical",
+      "distribution_policy": "accumulating",
+      "domicile": "IE",
+      "aum_eur": 85000000000,
+      "inception_date": "2009-09-25",
+      "index_tracked": "MSCI World",
+      "teilfreistellung_class": "equity"
+    },
+    {
+      "isin": "IE00BK5BQT80",
+      "name": "Vanguard FTSE All-World UCITS ETF",
+      "issuer": "Vanguard",
+      "ter": 0.0022,
+      "replication_method": "physical (sampling)",
+      "distribution_policy": "accumulating",
+      "domicile": "IE",
+      "aum_eur": 15000000000,
+      "inception_date": "2019-07-23",
+      "index_tracked": "FTSE All-World",
+      "teilfreistellung_class": "equity"
+    },
+    {
+      "isin": "IE00BKM4GZ66",
+      "name": "iShares Core MSCI EM IMI UCITS ETF",
+      "issuer": "iShares (BlackRock)",
+      "ter": 0.0018,
+      "replication_method": "physical (sampling)",
+      "distribution_policy": "accumulating",
+      "domicile": "IE",
+      "aum_eur": 20000000000,
+      "inception_date": "2014-05-30",
+      "index_tracked": "MSCI Emerging Markets IMI",
+      "teilfreistellung_class": "equity"
+    }
+  ]
+}
